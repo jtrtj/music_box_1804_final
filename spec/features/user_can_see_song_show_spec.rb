@@ -24,4 +24,17 @@ describe 'user sees one song' do
     expect(page).to_not have_content(song_2.title)
     expect(page).to_not have_content(song_2.length)
   end
+
+  it 'will see up to three other songs that have the same rating' do
+    artist = Artist.create(name: 'Journey')
+    song_1 = artist.songs.create(title: "Don't Stop Believing", length: 320, play_count: 390808, rating: 5)
+    song_2 = artist.songs.create(title: "Anyway You Want It", length: 420, play_count: 67908, rating: 5)
+    song_3 = artist.songs.create(title: "Heloo", length: 420, play_count: 67908, rating: 5)
+    song_4 = artist.songs.create(title: "gfdsasdfgf", length: 420, play_count: 67908, rating: 4)
+
+    visit song_path(song_1)
+
+    expect(page).to have_content("Songs With the Same Rating: #{song_2.title} #{song_3.title}")
+    expect(page).to_not have_content(song_4.title)
+  end
 end
