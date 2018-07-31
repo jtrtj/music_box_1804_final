@@ -11,4 +11,9 @@ class Genre < ApplicationRecord
     highest_rating = songs.maximum(:rating)
     songs.where(rating: highest_rating).limit(1)[0]
   end
+
+  def lowest_rated_song
+    lowest_rating = songs.minimum(:rating)
+    songs.where(rating: lowest_rating).limit(1)[0]
+  end
 end
