@@ -5,6 +5,8 @@ describe 'a visitor' do
     it 'will see a list of all genres' do
       g_1 = Genre.create(name: 'Dance')
       g_2 = Genre.create(name: 'Hardcore')
+      g_3 = Genre.create(name: 'Emo')
+      g_4 = Genre.create(name: 'Alt')
    
       visit genres_path
 
