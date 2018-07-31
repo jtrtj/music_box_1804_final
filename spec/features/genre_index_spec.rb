@@ -16,7 +16,7 @@ describe 'a visitor' do
       expect(page).to have_link(g_4.name)
     end
 
-    it 'will not see form to create new genre' do 
+    it 'will not see the form to create a new genre' do 
       g_1 = Genre.create(name: 'Dance')
       g_2 = Genre.create(name: 'Hardcore')
 
