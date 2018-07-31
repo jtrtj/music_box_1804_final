@@ -13,7 +13,7 @@ describe 'user sees one song' do
     SongGenre.create(song: song_2, genre: g_3)
 
     visit song_path(song_1)
-
+  
     expect(current_path).to eq("/songs/#{song_1.slug}")
 
     expect(page).to have_content(song_1.title)
