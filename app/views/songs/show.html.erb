@@ -6,3 +6,8 @@
 <%= "#{genre.name} " %> 
 <% end %>
 </h3>
+<h3>Songs With the Same Rating:
+<% @song.three_songs_with_same_rating.each do |song| %>
+<%= "#{song.title} " %> 
+<% end %>
+</h3>

@@ -18,4 +18,8 @@ class Song < ApplicationRecord
   def generate_slug
     self.slug = title.parameterize
   end
+
+  def three_songs_with_same_rating
+    Song.where(rating: self.rating).limit(3) #need to figure out how to to not include 'self'
+  end
 end
