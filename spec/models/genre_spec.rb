@@ -6,9 +6,7 @@ describe Genre, type: :model do
   end
 
   describe 'relationships' do
-    # it { should belong_to(:) }
-    # it { should have_many(:) }
-    # it { should have_many(:).through(:) }
+    it{should have_many(:songs).through(:song_genres)}
   end
 
   describe 'instance methods' do
