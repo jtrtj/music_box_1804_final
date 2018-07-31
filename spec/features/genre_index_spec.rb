@@ -10,8 +10,10 @@ describe 'a visitor' do
    
       visit genres_path
 
-      expect(page).to have_content(g_1.name)
-      expect(page).to have_content(g_2.name)
+      expect(page).to have_link(g_1.name)
+      expect(page).to have_link(g_2.name)
+      expect(page).to have_link(g_3.name)
+      expect(page).to have_link(g_4.name)
     end
   end
 end
