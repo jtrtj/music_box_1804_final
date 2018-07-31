@@ -8,7 +8,7 @@ describe SongGenre, type: :model do
 
   describe 'relationships' do
     it { should belong_to(:song) }
-    it { should have_many(:genre) }
+    it { should belong_to(:genre) }
   end
 
   describe 'instance methods' do
