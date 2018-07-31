@@ -1,6 +1,6 @@
 <h1><%= @genre.name %></h1>
 <h2>Average Rating: <%= @genre.avg_rating %>/5<h2>
-<h2>Song With Highest Rating: <%= @genre.highest_rated_song.name %> wiht rating of <%= @genre.highest_rated_song.rating %>/5<h2>
+<h2>Song With Highest Rating: <%= @genre.highest_rated_song.title %> wiht rating of <%= @genre.highest_rated_song.rating %>/5<h2>
 <ul>
 <% @genre.songs.each do |song| %>
 <li><%= song.title %><li>

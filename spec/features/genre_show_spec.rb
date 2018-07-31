@@ -52,7 +52,7 @@ describe 'A visitor' do
 
       visit genre_path(g_1)
 
-      expect(page).to have_content("Song With Highest Rating: #{g_1.highest_rated_song.name} wiht rating of #{g_1.highest_rated_song.rating}/5")
+      expect(page).to have_content("Song With Highest Rating: #{g_1.highest_rated_song.title} wiht rating of #{g_1.highest_rated_song.rating}/5")
     end
   end
 end

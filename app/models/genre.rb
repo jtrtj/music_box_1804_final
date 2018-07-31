@@ -6,4 +6,9 @@ class Genre < ApplicationRecord
   def avg_rating
     songs.average(:rating)
   end
+
+  def highest_rated_song
+    highest_rating = songs.maximum(:rating)
+    songs.where(rating: highest_rating).limit(1)[0]
+  end
 end
