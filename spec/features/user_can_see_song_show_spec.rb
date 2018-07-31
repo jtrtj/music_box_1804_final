@@ -12,6 +12,7 @@ describe 'user sees one song' do
 
     expect(page).to have_content(song_1.title)
     expect(page).to have_content(song_1.length)
+    expect(page).to have_content(song_1.rating)
     expect(page).to_not have_content(song_2.title)
     expect(page).to_not have_content(song_2.length)
   end
