@@ -15,6 +15,18 @@ describe 'a visitor' do
       expect(page).to have_link(g_3.name)
       expect(page).to have_link(g_4.name)
     end
+
+    it 'will not see form for to create new genre' do 
+      g_1 = Genre.create(name: 'Dance')
+      g_2 = Genre.create(name: 'Hardcore')
+
+      visit genres_path
+
+      expect(page).to_not have_field("Name")
+      expect(page).to_not have_button('Create Genre')
+      expect(page).to have_link(g_1.name)
+      expect(page).to have_link(g_2.name)
+    end
   end
 
   context 'logged in as an admin' do
