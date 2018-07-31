@@ -6,6 +6,10 @@ class GenresController < ApplicationController
     end
   end
 
+  def show
+    @genre = Genre.includes(:songs).find(params[:id])
+  end
+
   def create
     @genre = Genre.create(genre_params)
     if @genre.save
