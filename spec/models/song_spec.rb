@@ -15,7 +15,7 @@ describe Song, type: :model do
   end
 
   describe 'instance methods' do
-    it '#three_songs_with_same_rating' do
+    xit '#three_songs_with_same_rating' do
       artist = Artist.create(name: 'Journey')
       song_1 = artist.songs.create(title: "Don't Stop Believing", length: 320, play_count: 390808, rating: 5)
       song_2 = artist.songs.create(title: "Anyway You Want It", length: 420, play_count: 67908, rating: 5)

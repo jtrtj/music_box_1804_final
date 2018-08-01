@@ -21,7 +21,7 @@ describe 'a visitor' do
       g_2 = Genre.create(name: 'Hardcore')
 
       visit genres_path
-
+      
       expect(page).to_not have_field("Name")
       expect(page).to_not have_button('Create Genre')
       expect(page).to have_link(g_1.name)
