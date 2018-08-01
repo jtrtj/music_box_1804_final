@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'user sees one song' do
-  it 'with title and length' do
+  it 'with title, length, rating, and genres' do
     artist = Artist.create(name: 'Journey')
     song_1 = artist.songs.create(title: "Don't Stop Believing", length: 320, play_count: 390808, rating: 5)
     song_2 = artist.songs.create(title: "Anyway You Want It", length: 420, play_count: 67908)
